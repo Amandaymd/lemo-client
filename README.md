@@ -71,7 +71,7 @@ API | description | asynchronous | available for remote
 [lemo.mine.stop()](#submodule-mine-stop) | Stop mining | ✓ | ✖
 [lemo.mine.getMining()](#submodule-mine-getMining) | True if current LemoChain node is mining | ✓ | ✓
 [lemo.mine.getMiner()](#submodule-mine-getMiner) | Get the mining benefit account address of current LemoChain node | ✓ | ✓
-[lemo.account.newKeyPair()](#submodule-account-newKeyPair) | Create a private key and account address | ✓ | ✖
+[lemo.account.newKeyPair()](#submodule-account-newKeyPair) | Create a private key and account address | ✓ | ✓
 [lemo.account.getBalance(addr)](#submodule-account-getBalance) | Get the balance of an account | ✓ | ✓
 [lemo.account.getAccount(addr)](#submodule-account-getAccount) | Get the information of an account | ✓ | ✓
 [lemo.account.getCandidateInfo(addr)](#submodule-account-getCandidateInfo) | Get the information of an candidate | ✓ | ✓
@@ -892,7 +892,7 @@ Get the information of an account
 
 ##### Example
 ```js
-lemo.account.getBalance('Lemo83BYKZJ4RN4TKC9C78RFW7YHW6S87TPRSH34')
+lemo.account.getAccount('Lemo83BYKZJ4RN4TKC9C78RFW7YHW6S87TPRSH34')
     .then(function(account) {
         console.log(account.balance.toMoney()); // "1600000000 LEMO"
     })
@@ -985,6 +985,7 @@ Get paged transactions by account address
     - `txList` [Transaction](#data-structure-transaction) array. There is a `minedTime` field in every item to record the mined time of the block which contains the transaction  
     - `total` Transaction's count in this account  
 
+##### Example
 ##### Example
 
 ```js
